@@ -10,7 +10,7 @@ int count_neighbour_cell(int h, int w){  /*returns the count of alive neighbours
       if(i==h && j==w)
         continue;
       
-      if((i<board_h) && (j<board_w) && (i>=0) && (j>=0))
+      if((i<BOARD_H) && (j<BOARD_W) && (i>=0) && (j>=0))
         count += board[i][j].current;
     }
   }

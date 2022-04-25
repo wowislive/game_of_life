@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define board_h 9  /* board height */
-#define board_w 9  /* board width */
+#define BOARD_H 9  /* board height */
+#define BOARD_W 9  /* board width */
 #define MAX_USER_INPUT 2000
 
 struct cell{
@@ -11,9 +11,9 @@ int current;  /* current situation, which is visible on screen */
 int future;   /* temporary calculation area for next round */
 };
 
-extern struct cell board [board_h] [board_w];
+extern struct cell board [BOARD_H] [BOARD_W];
 
-int count_neighbour_cell(int x, int y);
+int count_neighbour_cell(int x, int y, struct cell b[BOARD_H][BOARD_W]);
 int future_life_change(int i, int k);
 void board_status_exchange(void);
 char ask_command(void);
