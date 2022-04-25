@@ -1,6 +1,6 @@
 #include "main.h"
 
-int count_neighbour_cell(int h, int w){  /*returns the count of alive neighbours*/
+int count_neighbour_cell(int h, int w, struct cell b[BOARD_H][BOARD_W]){  /*returns the count of alive neighbours*/
 
   int count = 0;
 
@@ -11,7 +11,7 @@ int count_neighbour_cell(int h, int w){  /*returns the count of alive neighbours
         continue;
       
       if((i<BOARD_H) && (j<BOARD_W) && (i>=0) && (j>=0))
-        count += board[i][j].current;
+        count += b[i][j].current;
     }
   }
   

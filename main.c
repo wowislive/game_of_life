@@ -1,14 +1,13 @@
 #include "main.h"
 
-struct cell board [BOARD_H] [BOARD_W] = {0, 0};
-
 int main(void){
 
   int neighbour;
   char input_command;
+  struct cell board [BOARD_H] [BOARD_W] = {0, 0};
 
   srand(time(NULL));
-  init_board_state();
+  init_board_state(board);
   printf("N to print next step\nX to terminate programm\n");
 
   do{
@@ -29,7 +28,7 @@ int main(void){
         }
       }
     printf("\n");
-    board_status_exchange();
+    board_status_exchange(board);
     }
   }while(input_command!= 'X');
 
