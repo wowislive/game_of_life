@@ -4,7 +4,8 @@ int main(void){
 
   int neighbour;
   char input_command;
-  struct cell board [BOARD_H] [BOARD_W] = {0, 0};
+  struct cell board [BOARD_H] [BOARD_W] = {{{0, 0}}};
+  int i,j;
 
   srand(time(NULL));
   init_board_state(board);
@@ -14,9 +15,10 @@ int main(void){
     input_command = ask_command();
 
     if(input_command == 'N'){
-      for(int i=0; i<BOARD_H; i++){
+
+      for(i=0; i<BOARD_H; i++){
         printf("\n");
-        for(int j=0; j<BOARD_W; j++){
+        for(j=0; j<BOARD_W; j++){
           
           if(board[i][j].current == 0)
             printf("O");
