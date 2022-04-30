@@ -1,6 +1,19 @@
+/*-------------------------------------------------------------------*
+*    HEADER FILES                                                    *
+*--------------------------------------------------------------------*/
 #include "main.h"
 
-int count_neighbour_cell(int h, int w, struct cell b[BOARD_H][BOARD_W]){  /*returns the count of alive neighbours*/
+/*********************************************************************
+	F U N C T I O N    D E S C R I P T I O N
+---------------------------------------------------------------------
+ NAME: count_neighbour_cell
+ DESCRIPTION: returns the count of alive neighbours
+	Input: int h, int w, struct cell b[BOARD_H][BOARD_W]
+	Output: int count
+  Used global variables: BOARD_H, BOARD_W
+ REMARKS when using this function:
+*********************************************************************/
+int count_neighbour_cell(int h, int w, struct cell b[BOARD_H][BOARD_W]){
 
   int count = 0;
   int i,j;

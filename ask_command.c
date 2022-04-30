@@ -1,6 +1,19 @@
+/*-------------------------------------------------------------------*
+*    HEADER FILES                                                    *
+*--------------------------------------------------------------------*/
 #include "main.h"
 
-char ask_command(char c[]){  /*Ask char from user*/
+/*********************************************************************
+	F U N C T I O N    D E S C R I P T I O N
+---------------------------------------------------------------------
+ NAME: ask_command
+ DESCRIPTION: Ask char from user
+	Input: char c[]
+	Output: char s[0]
+  Used global variables: none
+ REMARKS when using this function:
+*********************************************************************/
+char ask_command(char c[]){
 
   char s[MAX_USER_INPUT];
   do{
