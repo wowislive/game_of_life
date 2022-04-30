@@ -1,5 +1,5 @@
 gameoflife.exe: main.o init_board_state.o future_life_change.o count_neighbour_cell.o board_status_exchange.o ask_command.o main.h
-	gcc main.o init_board_state.o future_life_change.o count_neighbour_cell.o board_status_exchange.o ask_command.o -o gameoflife
+	gcc main.o init_board_state.o future_life_change.o count_neighbour_cell.o board_status_exchange.o ask_command.o -lncursesw -o gameoflife
 
 main.o:
 	gcc -c -Wall -ansi -pedantic main.c
